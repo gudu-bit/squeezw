@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Squeeze — Free Online Image, PDF &amp; File Compressor</title>
+<meta name="description" content="Compress images and PDFs, convert files, and download direct video and audio files in one free online toolkit. Fast, private, browser-based file tools from Squeeze.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f5f9ff">
+<meta name="application-name" content="Squeeze">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Squeeze">
+<meta property="og:title" content="Squeeze — Free Online File Tools">
+<meta property="og:description" content="Compress images and PDFs and use handy file conversion tools in your browser.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Squeeze — Free Online File Tools">
+<meta name="twitter:description" content="Compress images and PDFs and use handy file conversion tools in your browser.">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Squeeze",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Any",
+  "browserRequirements":"A modern browser with JavaScript enabled",
+  "inLanguage":"en",
+  "description":"A browser-based toolkit for image and PDF compression and file conversion.",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "featureList":["Image compression","PDF compression","PDF merging and splitting","PDF to image conversion","Direct video and audio file downloads","Audio and video tools where browser support allows"]
+}
+</script>
+<style>
+:root{--bg:#f5f9ff;--panel:#ffffff;--muted:#77717a;--line:#dce7f5;--text:#29232a;--a:#2563eb;--b:#1d4ed8}
+*{box-sizing:border-box}body{margin:0;background:#f5f9ff;color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,Segoe UI,sans-serif}
+.wrap{max-width:1000px;margin:auto;padding:26px 22px 64px}.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px}.logo{font-weight:850;font-size:22px;letter-spacing:-1px}.logo span{color:#f2b705}.pill{border:1px solid var(--line);background:#fff;padding:8px 13px;border-radius:99px;color:var(--muted);font-size:12px}
+.hero{text-align:center;max-width:700px;margin:0 auto 30px}.eyebrow{color:#1d4ed8;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.08;letter-spacing:-2px;margin:12px 0}.grad{color:#1d4ed8}.hero p{color:var(--muted);font-size:16px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 30px #8d426010}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.tab{background:#fff;border:1px solid var(--line);color:#665d65;padding:10px 15px;border-radius:10px;cursor:pointer;font-weight:650}.tab.active{background:#fff4c2;border-color:#f2cf55;color:#1745a3}
+.drop{border:1.5px dashed #8eb4f5;background:#f8fbff;border-radius:14px;min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;cursor:pointer;transition:.2s}.drop:hover,.drop.over{border-color:#1d4ed8;background:#eef5ff}.uploadicon{width:48px;height:48px;border-radius:14px;background:#fff4c2;display:grid;place-items:center;font-size:25px;margin-bottom:10px;color:#1d4ed8}.drop strong{font-size:17px}.drop small{color:var(--muted);margin-top:6px}.drop input{display:none}
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.field{background:#f8fbff;border:1px solid var(--line);border-radius:12px;padding:13px}.field label{display:flex;justify-content:space-between;color:#514750;font-size:13px;font-weight:650;margin-bottom:9px}.field input[type=number]{width:100%;padding:10px 11px;border:1px solid #d5e2f3;border-radius:9px;background:#fff;color:#29232a;font:inherit}.field input[type=number]:focus,.field select:focus{outline:2px solid #b9d2ff;border-color:#1d4ed8}.field select{width:100%;background:#fff;color:#29232a;border:1px solid #d5e2f3;padding:10px;border-radius:9px}.target-row{display:grid;grid-template-columns:1fr 110px;gap:8px}.target-note{font-size:12px;color:var(--muted);margin-top:7px}
+.action{display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:12px 20px;background:#2563eb;color:white;font-weight:750;cursor:pointer}.btn:hover{background:#1745a3;box-shadow:0 0 0 3px #fff0b3}.btn:disabled{opacity:.4;cursor:not-allowed}.hint{font-size:12px;color:var(--muted)}
+.result{display:none;margin-top:18px;background:#f5f9ff;border:1px solid #dce7f5;border-radius:13px;padding:16px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}.stat{background:#fff;padding:12px;border:1px solid var(--line);border-radius:10px}.stat small{color:var(--muted);display:block}.stat b{font-size:19px}.download{color:#1d4ed8;font-weight:700;text-decoration:none}.queue{margin-top:14px;color:var(--muted);font-size:13px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.feature{border:1px solid var(--line);background:#fff;border-radius:13px;padding:15px}.feature b{display:block;margin:6px 0}.feature p{margin:0;color:var(--muted);font-size:13px}.footer{text-align:center;color:#88808a;font-size:12px;margin-top:25px}
+.seo-content{margin-top:28px;padding:24px;background:#fff;border:1px solid var(--line);border-radius:16px}.seo-content h2{font-size:22px;letter-spacing:-.5px;margin:22px 0 8px}.seo-content h2:first-child{margin-top:0}.seo-content h3{font-size:16px;margin:0 0 6px}.seo-content p{color:var(--muted);margin:0 0 12px}.seo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.seo-grid article{background:#f8fbff;border:1px solid var(--line);border-radius:12px;padding:14px}.seo-grid p{font-size:13px;margin:0}.seo-content details{border-top:1px solid var(--line);padding:12px 0}.seo-content summary{font-weight:700;cursor:pointer}.seo-content details p{margin:8px 0 0}
+@media(max-width:680px){.wrap{padding:18px 14px}.nav{margin-bottom:34px}.controls,.features,.seo-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.panel{padding:14px}.hero h1{letter-spacing:-1px}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="nav"><div class="logo">◈ SQUEEZE<span>.</span></div><div class="pill">PRIVATE · IN-BROWSER PROCESSING</div></header>
+<section class="hero"><div class="eyebrow">Less size. Same moments.</div><h1>Make big files<br><span class="grad">beautifully small.</span></h1><p>Compress images, PDFs, videos and audio in one simple workspace. Your files stay on your device whenever the selected tool supports local processing.</p></section>
+<section class="panel">
+<div class="tabs" role="tablist"><button class="tab active" data-kind="image">▧ Images</button><button class="tab" data-kind="pdf">▤ PDF</button><button class="tab" data-kind="video">▶ Video</button><button class="tab" data-kind="audio">♫ Audio</button></div>
+<label class="drop" id="drop"><div class="uploadicon" id="ico">⇧</div><strong id="dropTitle">Drop your images here</strong><small id="dropSub">or click to browse · JPG, PNG, WebP</small><input id="file" type="file" multiple accept="image/jpeg,image/png,image/webp"></label>
+<div class="controls">
+ <div class="field" id="qualityField"><label><span>Compression quality (%)</span><span class="hint">Enter 10–95</span></label><input id="quality" type="number" min="10" max="95" step="1" value="75" inputmode="numeric" aria-label="Compression quality percentage"></div>
+ <div class="field" id="formatField"><label>Output format</label><select id="format"><option value="image/webp">WebP — smaller files</option><option value="image/jpeg">JPEG</option><option value="image/png">PNG (lossless)</option></select></div>
+</div>
+<div class="field" id="targetField" style="margin-top:14px">
+ <label><span>Target file size</span><span class="hint">Optional · images</span></label>
+ <div class="target-row"><input id="targetSize" type="number" min="1" step="1" value="200" aria-label="Target file size"><select id="targetUnit" aria-label="Target size unit"><option value="1024">KB</option><option value="1048576">MB</option><option value="1073741824">GB</option></select></div>
+ <div class="target-note">We'll adjust quality and image dimensions to get as close as possible. Use WebP or JPEG for best results.</div>
+</div>
+<div class="field" id="mediaDownloadField" style="display:none;margin-top:14px">
+ <label><span id="mediaUrlLabel">Download video or audio from a direct file link</span></label>
+ <input id="mediaUrl" type="url" inputmode="url" placeholder="https://example.com/media.mp4" aria-label="Direct media file URL" style="width:100%;padding:12px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--text)">
+ <div class="target-note">Paste a direct link to an MP4, WebM, MP3, WAV or other media file, then download it. The source server must allow browser access (CORS). YouTube, Instagram and other webpage links are not direct media-file links.</div>
+ <button class="btn" id="downloadMedia" type="button" style="margin-top:12px">Download from URL ↓</button>
+ <div class="hint" id="mediaDownloadHint" role="status" aria-live="polite" style="margin-top:8px"></div>
+</div>
+<div class="field" id="audioOptions" style="display:none;margin-top:14px">
+ <label>Audio output format</label>
+ <div class="controls" style="margin-top:0">
+  <div><select id="audioFormat"><option value="mp3">MP3 — smaller file</option><option value="wav">WAV — broad compatibility</option></select></div>
+  <div><select id="audioBitrate"><option value="64">64 kbps</option><option value="96">96 kbps</option><option value="128" selected>128 kbps</option><option value="160">160 kbps</option><option value="192">192 kbps</option></select></div>
+ </div>
+ <div class="target-note">MP3 export uses a browser encoder. If it cannot load, choose WAV. Audio is converted to mono to reduce file size.</div>
+</div>
+<div class="field" id="pdfConvertField" style="display:none;margin-top:14px">
+ <label>Choose a PDF tool</label>
+ <select id="pdfAction">
+  <option value="compress">Compress PDF</option>
+  <option value="merge">Merge PDF files</option>
+  <option value="split">Split / extract PDF pages</option>
+  <option value="rotate">Rotate PDF pages</option>
+  <option value="jpg">Convert PDF pages to JPG</option>
+  <option value="png">Convert PDF pages to PNG</option>
+  <option value="text">PDF to TXT</option>
+  <option value="docx">PDF to Word (DOCX — text-based)</option>
+  <option value="xlsx">PDF to Excel (XLSX — text-based)</option>
+  <option value="pptx">PDF to PowerPoint (PPTX — text-based)</option>
+  <option value="imagepdf">JPG / PNG images to PDF</option>
+  <option value="docxpdf">Word (DOCX) to PDF — text-based</option>
+  <option value="xlsxpdf">Excel (XLSX) to PDF — text-based</option>
+  <option value="pptxpdf">PowerPoint (PPTX) to PDF — text-based</option>
+ </select>
+ <div class="controls" style="margin-top:10px">
+  <div class="field" id="pdfPagesField" style="display:none"><label>Page range (for split)</label><input id="pdfPages" type="text" placeholder="Example: 1-3,5 (blank = all pages)"></div>
+  <div class="field" id="pdfRotateField" style="display:none"><label>Rotation angle</label><select id="pdfRotation"><option value="90">90° clockwise</option><option value="180">180°</option><option value="270">270° clockwise</option></select></div>
+ </div>
+ <div class="target-note">PDF to Word / Excel / PowerPoint exports extracted text; it does not preserve original layout, tables, or images. PDF compression rebuilds pages as images, so searchable text and vector content are not retained. Scanned PDFs need OCR for text extraction.</div>
+</div>
+<div class="action"><button class="btn" id="go" disabled>Compress files ↗</button><span class="hint" id="hint">Choose files to get started.</span></div>
+<div class="queue" id="queue"></div>
+<div class="result" id="result"><b>Compression complete</b><div class="stats"><div class="stat"><small>Original size</small><b id="before">—</b></div><div class="stat"><small>New size</small><b id="after">—</b></div><div class="stat"><small>Space saved</small><b id="saved">—</b></div></div><div id="links"></div></div>
+</section>
+<section class="features"><div class="feature">🖼️ <b>Image compression</b><p>Resize and convert JPG, PNG and WebP images using your browser's canvas.</p></div><div class="feature">📄 <b>PDF optimization</b><p>Rebuild PDFs from optimized page images to reduce scanned or image-heavy documents.</p></div><div class="feature">🎬 <b>Media tools</b><p>Video and audio conversion controls are provided where your browser supports recording and decoding APIs.</p></div></section>
+<section class="seo-content" aria-labelledby="tools-heading">
+<h2 id="tools-heading">Free online file tools</h2>
+<p>Squeeze brings useful file tools together in one simple workspace. Choose a tool, add a supported file, adjust the available settings, and download the result. No desktop software installation is needed.</p>
+<div class="seo-grid">
+<article><h3>Image compressor</h3><p>Reduce the size of JPG, PNG and WebP images. Choose an output format, set image quality, and optionally enter a target size.</p></article>
+<article><h3>PDF tools</h3><p>Compress, merge, split, rotate and convert supported PDF files. You can also turn supported images into a PDF.</p></article>
+<article><h3>Video and audio downloader</h3><p>Download direct video and audio file links in your browser. The source host must permit browser access; webpage links from streaming platforms are not supported.</p></article>
+</div>
+<h2>Private, browser-based processing</h2>
+<p>Files are processed on your device when the selected tool supports local processing. Squeeze does not need an account to use the tools on this page. Some conversion libraries load from trusted content delivery networks, so an internet connection is required.</p>
+<h2>Frequently asked questions</h2>
+<details><summary>Is Squeeze free to use?</summary><p>The tools on this page are available to use without a paid account. Your device and browser capabilities may affect which operations work.</p></details>
+<details><summary>Does Squeeze upload my files?</summary><p>Processing happens in your browser for the tools on this page. Your files remain on your device during supported local processing. Do not use the service for files if your browser or a future tool explicitly indicates that upload is required.</p></details>
+<details><summary>Which file formats are supported?</summary><p>Image tools support JPG, PNG and WebP. PDF tools work with PDF files and selected Office or image formats for specific conversions. Audio and video formats depend on browser support.</p></details>
+<details><summary>Can I use Squeeze from any country?</summary><p>Squeeze is a web-based tool and can be accessed internationally wherever the website and its required libraries are available. Performance depends on your internet connection, device and browser.</p></details>
+</section>
+<div class="footer">Files are processed on your device when supported. Internet is required to load conversion libraries. For best results, use current Chrome or Edge and avoid very large files.</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/docx.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+<script>
+const $=id=>document.getElementById(id);let kind='image',files=[];
+const configs={
+ image:['Drop your images here','or click to browse · JPG, PNG, WebP','image/jpeg,image/png,image/webp','▧','75%','Compress files ↗'],
+ pdf:['Drop your PDF here','or click to browse · PDF documents','application/pdf','▤','70%','Compress PDF ↗'],
+ video:['Drop your video here','or click to browse · MP4, WebM, MOV (browser support varies)','video/*','▶','70%','Compress video ↗'],
+ audio:['Drop your audio here','or click to browse · MP3, WAV, M4A, OGG (browser support varies)','audio/*','♫','70%','Compress audio ↗']
+};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));kind=b.dataset.kind;let c=configs[kind];$('dropTitle').textContent=c[0];$('dropSub').textContent=c[1];$('file').accept=c[2];$('file').multiple=kind==='image';$('ico').textContent=c[3];$('qualityField').style.display=kind==='audio'||kind==='video'||kind==='image'||kind==='pdf'?'block':'none';$('audioOptions').style.display=kind==='audio'?'block':'none';$('mediaDownloadField').style.display=(kind==='video'||kind==='audio')?'block':'none';$('mediaUrlLabel').textContent=kind==='video'?'Download video from a direct file link':'Download audio from a direct file link';$('mediaUrl').placeholder=kind==='video'?'https://example.com/video.mp4':'https://example.com/audio.mp3';$('mediaDownloadHint').textContent='';$('formatField').style.display=kind==='image'?'block':'none';$('pdfConvertField').style.display=kind==='pdf'?'block':'none';$('targetField').style.display=kind==='image'?'block':'none';$('quality').value=kind==='pdf'||kind==='video'||kind==='audio'?70:75;$('go').textContent=kind==='pdf'?pdfButtonText():c[5];if(kind==='pdf')$('pdfAction').dispatchEvent(new Event('change'));files=[];$('file').value='';$('queue').textContent='';update()});
+function pdfButtonText(){const v=$('pdfAction').value;return ({compress:'Compress PDF ↗',merge:'Merge PDFs ↗',split:'Split PDF ↗',rotate:'Rotate PDF ↗',jpg:'Convert PDF to JPG ↗',png:'Convert PDF to PNG ↗',text:'PDF to TXT ↗',docx:'PDF to Word ↗',xlsx:'PDF to Excel ↗',pptx:'PDF to PowerPoint ↗',imagepdf:'Images to PDF ↗',docxpdf:'Word to PDF ↗',xlsxpdf:'Excel to PDF ↗',pptxpdf:'PowerPoint to PDF ↗'})[v]}
+$('pdfAction').onchange=()=>{const v=$('pdfAction').value;$('go').textContent=pdfButtonText();$('qualityField').style.display=v==='compress'?'block':'none';$('pdfPagesField').style.display=v==='split'?'block':'none';$('pdfRotateField').style.display=v==='rotate'?'block':'none';$('file').multiple=v==='merge'||v==='imagepdf';const accepts={imagepdf:'image/jpeg,image/png',docxpdf:'.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document',xlsxpdf:'.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',pptxpdf:'.pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation'};$('file').accept=accepts[v]||'application/pdf';files=[];$('file').value='';$('queue').textContent='';update();$('dropTitle').textContent=v==='imagepdf'?'Drop JPG / PNG images here':v==='merge'?'Drop two or more PDF files here':v.endsWith('pdf')&&v!=='imagepdf'?`Drop ${v==='docxpdf'?'Word':v==='xlsxpdf'?'Excel':'PowerPoint'} file here`:'Drop your PDF here';$('dropSub').textContent=v==='imagepdf'?'or click to browse · JPG, PNG':v==='merge'?'Select multiple PDF files to combine':v.endsWith('pdf')&&v!=='imagepdf'?'or click to browse · Office document':'or click to browse · PDF documents'};
+$('downloadMedia').onclick=async()=>{
+ const raw=$('mediaUrl').value.trim(),hint=$('mediaDownloadHint'),btn=$('downloadMedia');
+ if(!raw){hint.textContent='Paste a direct media file URL first.';return;}
+ let url;try{url=new URL(raw);if(!['http:','https:'].includes(url.protocol))throw Error();}catch(_){hint.textContent='Enter a valid HTTP or HTTPS URL.';return;}
+ btn.disabled=true;hint.textContent='Fetching media file…';
+ try{
+  const response=await fetch(url.href,{mode:'cors'});
+  if(!response.ok)throw Error('The server returned HTTP '+response.status+'.');
+  const type=(response.headers.get('content-type')||'').split(';')[0].toLowerCase();
+  const isVideo=kind==='video',valid=isVideo?(type.startsWith('video/')||/\.(mp4|webm|mov|m4v|ogv)$/i.test(url.pathname)):(type.startsWith('audio/')||/\.(mp3|wav|m4a|aac|ogg|flac|opus)$/i.test(url.pathname));
+  if(!valid)throw Error('This link does not appear to be a supported '+(isVideo?'video':'audio')+' file. Use a direct media-file URL.');
+  const blob=await response.blob();
+  if(!blob.size)throw Error('The downloaded file is empty.');
+  if(blob.size>500*1024*1024)throw Error('This file is over 500 MB. Use a smaller file to avoid browser memory problems.');
+  let name=decodeURIComponent(url.pathname.split('/').pop()||'media-file').replace(/[\\/:*?"<>|]/g,'_');
+  if(!/\.[a-z0-9]{2,5}$/i.test(name)){const ext=type.split('/')[1];name+='.'+((ext==='mpeg')?'mp3':(ext|| (isVideo?'mp4':'mp3'))).replace('x-m4a','m4a');}
+  $('links').innerHTML='';downloadBlob(blob,name);$('result').style.display='block';
+  $('queue').textContent='Download ready. Use the link below to save your '+(isVideo?'video.':'audio file.');
+  hint.textContent='Ready · '+fmt(blob.size);
+ }catch(e){
+  hint.textContent=e.message.includes('Failed to fetch')?'Could not access this link. The host may block browser downloads (CORS), require sign-in, or use a webpage link instead of a direct media file.':e.message;
+ }finally{btn.disabled=false;}
+};
+$('quality').oninput=()=>{let v=Number($('quality').value);if(v<10||v>95)$('quality').setCustomValidity('Enter a value from 10 to 95');else $('quality').setCustomValidity('')};
+$('file').onchange=e=>setFiles([...e.target.files]);
+function setFiles(f){
+ const action=kind==='pdf'?$('pdfAction').value:'';
+ const allowed=kind==='image'?x=>/^image\/(jpeg|png|webp)$/.test(x.type)||/\.(jpg|jpeg|png|webp)$/i.test(x.name):kind==='pdf'?(action==='imagepdf'?x=>/^image\/(jpeg|png)$/.test(x.type)||/\.(jpg|jpeg|png)$/i.test(x.name):action==='docxpdf'?x=>/\.docx$/i.test(x.name):action==='xlsxpdf'?x=>/\.xlsx$/i.test(x.name):action==='pptxpdf'?x=>/\.pptx$/i.test(x.name):x=>x.type==='application/pdf'||/\.pdf$/i.test(x.name)):kind==='video'?x=>x.type.startsWith('video/')||/\.(mp4|mov|webm|m4v)$/i.test(x.name):x=>x.type.startsWith('audio/')||/\.(mp3|wav|m4a|aac|ogg|flac)$/i.test(x.name);
+ const bad=f.filter(x=>!(typeof allowed==='function'?allowed(x):allowed.test(x.type)));
+ if(bad.length){$('queue').textContent='Unsupported file type: '+bad.map(x=>x.name).join(', ');f=f.filter(x=>!bad.includes(x));}
+ const tooLarge=f.filter(x=>x.size>300*1024*1024);
+ if(tooLarge.length){$('queue').textContent='Files over 300 MB are not accepted because browser memory may be insufficient: '+tooLarge.map(x=>x.name).join(', ');f=f.filter(x=>!tooLarge.includes(x));}
+ if(kind==='pdf'&&action==='merge'&&f.length<2&&f.length>0)$('queue').textContent='Add at least two PDF files to merge.';
+ if(kind==='pdf'&&action==='imagepdf'&&!f.length)$('queue').textContent='Choose JPG or PNG images.';
+ files=f;$('dropTitle').textContent=f.length?f.map(x=>x.name).join(', '):configs[kind][0];$('hint').textContent=f.length?`${f.length} file(s) · ${fmt(f.reduce((a,x)=>a+x.size,0))}`:'Choose supported files to get started.';update();
+}
+function update(){const needsTwo=kind==='pdf'&&$('pdfAction').value==='merge';$('go').disabled=!files.length||(needsTwo&&files.length<2);$('result').style.display='none'}
+$('drop').onclick=e=>{if(e.target.tagName!=='INPUT')$('file').click()};$('drop').ondragover=e=>{e.preventDefault();$('drop').classList.add('over')};$('drop').ondragleave=()=>$('drop').classList.remove('over');$('drop').ondrop=e=>{e.preventDefault();$('drop').classList.remove('over');setFiles([...e.dataTransfer.files])};
+function fmt(n){if(n<1024)return n+' B';if(n<1048576)return(n/1024).toFixed(1)+' KB';if(n<1073741824)return(n/1048576).toFixed(2)+' MB';return(n/1073741824).toFixed(2)+' GB'}
+function downloadBlob(blob,name){let url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.textContent='⬇ Download '+name;a.className='download';a.style.display='block';a.style.marginTop='8px';a.rel='noopener';$('links').append(a);a.addEventListener('click',()=>setTimeout(()=>URL.revokeObjectURL(url),60000),{once:true})}
+$('go').onclick=async()=>{ let quality=Number($('quality').value);
+ if((kind==='image'||kind==='video'||kind==='audio'||(kind==='pdf'&&$('pdfAction').value==='compress'))&&(!Number.isFinite(quality)||quality<10||quality>95)){ $('hint').textContent='Enter a compression quality from 10 to 95.'; $('quality').focus(); return; }
+ $('go').disabled=true;$('hint').textContent='Working…';$('queue').textContent='Processing locally — keep this tab open.';$('links').innerHTML='';let totalIn=files.reduce((a,f)=>a+f.size,0),totalOut=0;
+try{
+ for(let f of (kind==='pdf'&&['merge','imagepdf'].includes($('pdfAction').value)?[files[0]]:files)){let blob,name=f.name.replace(/\.[^.]+$/,'');
+ if(kind==='image'){let img=await loadImage(f),mime=$('format').value,target=Number($('targetSize').value)*Number($('targetUnit').value),useTarget=Number.isFinite(target)&&target>0,scale=Math.min(1,2400/Math.max(img.width,img.height)),canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');let encode=async(sc,q)=>{canvas.width=Math.max(1,Math.round(img.width*sc));canvas.height=Math.max(1,Math.round(img.height*sc));ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);return await new Promise(r=>canvas.toBlob(r,mime,q))};if(useTarget&&mime!=='image/png'){let low=.10,high=.95,best=null;for(let i=0;i<9;i++){let q=(low+high)/2,b=await encode(scale,q);if(!b)throw Error('This image format is not supported.');if(b.size<=target){best=b;low=q}else high=q}if(!best){for(let i=0;i<8;i++){scale*=.82;let b=await encode(scale,.10);if(b&&b.size<=target){best=b;break}}}blob=best||await encode(scale,.10);$('queue').textContent=blob.size<=target?'Target size reached.':'Closest result created; this image could not be reduced to the requested size.';}else{blob=await encode(scale,Number($('quality').value)/100);if(useTarget&&mime==='image/png')$('queue').textContent='PNG uses lossless compression; switch to WebP or JPEG for target-size control.';}name+='.'+({'image/webp':'webp','image/jpeg':'jpg','image/png':'png'}[mime]);}
+ else if(kind==='pdf'){
+   const action=$('pdfAction').value;
+   if(action==='imagepdf'){blob=await imagesToPdf(files);name='images-combined.pdf';}
+   else if(['docxpdf','xlsxpdf','pptxpdf'].includes(action)){blob=await officeToPdf(f,action);name+='-converted.pdf';}
+   else if(action==='merge'){blob=await mergePdfs(files);name='merged.pdf';}
+   else if(action==='compress'){blob=await compressPdf(f,Number($('quality').value)/100);name+='-compressed.pdf';}
+   else if(action==='split'){const pages=await splitPdf(f,$('pdfPages').value);for(let i=0;i<pages.length;i++){totalOut+=pages[i].blob.size;downloadBlob(pages[i].blob,`${name}-pages-${pages[i].label}.pdf`);}continue;}
+   else if(action==='rotate'){blob=await rotatePdf(f,Number($('pdfRotation').value));name+='-rotated.pdf';}
+   else if(action==='text'){blob=await pdfToText(f);name+='.txt';}
+   else if(['docx','xlsx','pptx'].includes(action)){blob=await pdfToOffice(f,action);name+=({docx:'.docx',xlsx:'.xlsx',pptx:'.pptx'})[action];}
+   else {const outputs=await pdfToImages(f,action);for(let i=0;i<outputs.length;i++){totalOut+=outputs[i].blob.size;downloadBlob(outputs[i].blob,`${name}-page-${i+1}.${action}`);}continue;}
+  }
+ else if(kind==='video'){const result=await compressVideo(f,Number($('quality').value)/100);blob=result.blob;name+='-compressed.'+result.extension;if(!result.audioPreserved)$('queue').textContent='Video created, but this browser could not preserve its audio track.';}
+ else {const result=await compressAudio(f,Number($('quality').value)/100,$('audioFormat').value,Number($('audioBitrate').value));blob=result.blob;name+='-compressed.'+result.extension;}
+ totalOut+=blob.size;downloadBlob(blob,name);
+ }
+ $('before').textContent=fmt(totalIn);$('after').textContent=fmt(totalOut);let pct=totalIn?Math.max(0,(1-totalOut/totalIn)*100):0;$('saved').textContent=pct.toFixed(1)+'%';$('result').style.display='block';$('queue').textContent='Finished. Compare the sizes above before using the output.';$('hint').textContent='Done!';
+}catch(e){$('queue').textContent='Could not compress this file: '+e.message;$('hint').textContent='Try a supported file or a smaller file.'}
+$('go').disabled=false;
+};
+function loadImage(file){return new Promise((res,rej)=>{let u=URL.createObjectURL(file),i=new Image();i.onload=()=>{URL.revokeObjectURL(u);res(i)};i.onerror=()=>rej(Error('Unsupported image'));i.src=u})}
+async function pdfToText(file){
+ if(!window.pdfjsLib)throw Error('PDF tools did not load. Check your internet connection and refresh.');
+ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+ const pdf=await pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise,parts=[];
+ for(let n=1;n<=pdf.numPages;n++){const page=await pdf.getPage(n),content=await page.getTextContent();parts.push(`--- Page ${n} ---\n`+content.items.map(x=>x.str).join(' '));}
+ return new Blob([parts.join('\n\n')],{type:'text/plain;charset=utf-8'});
+}
+async function pdfToImages(file,format){
+ if(!window.pdfjsLib)throw Error('PDF tools did not load. Check your internet connection and refresh.');
+ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+ const pdf=await pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise,outputs=[];
+ for(let n=1;n<=pdf.numPages;n++){
+  const page=await pdf.getPage(n),vp=page.getViewport({scale:1.5}),canvas=document.createElement('canvas');
+  canvas.width=Math.round(vp.width);canvas.height=Math.round(vp.height);
+  await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;
+  const blob=await new Promise(resolve=>canvas.toBlob(resolve,format==='jpg'?'image/jpeg':'image/png',.92));
+  outputs.push({blob});
+ }
+ return outputs;
+}
+function getPdfLib(){if(!window.PDFLib)throw Error('PDF library did not load. Check your internet connection and refresh.');return PDFLib;}
+async function mergePdfs(inputFiles){const {PDFDocument}=getPdfLib();if(inputFiles.length<2)throw Error('Select at least two PDF files to merge.');const out=await PDFDocument.create();for(const f of inputFiles){const src=await PDFDocument.load(await f.arrayBuffer());const copied=await out.copyPages(src,src.getPageIndices());copied.forEach(p=>out.addPage(p));}return new Blob([await out.save()],{type:'application/pdf'});}
+function parsePageSelection(raw,total){if(!raw.trim())return Array.from({length:total},(_,i)=>i);const set=new Set();for(const part of raw.split(',')){const m=part.trim().match(/^(\d+)(?:\s*-\s*(\d+))?$/);if(!m)throw Error('Use a page range like 1-3,5.');let a=Number(m[1]),b=Number(m[2]||m[1]);if(a<1||b<a||b>total)throw Error(`Page range must be between 1 and ${total}.`);for(let n=a;n<=b;n++)set.add(n-1);}return [...set].sort((a,b)=>a-b);}
+async function splitPdf(file,range){const {PDFDocument}=getPdfLib(),src=await PDFDocument.load(await file.arrayBuffer()),indices=parsePageSelection(range,src.getPageCount()),out=[];for(const index of indices){const doc=await PDFDocument.create(),[page]=await doc.copyPages(src,[index]);doc.addPage(page);out.push({blob:new Blob([await doc.save()],{type:'application/pdf'}),label:index+1});}return out;}
+async function rotatePdf(file,angle){const {PDFDocument,degrees}=getPdfLib(),doc=await PDFDocument.load(await file.arrayBuffer());doc.getPages().forEach(p=>p.setRotation(degrees((p.getRotation().angle+angle)%360)));return new Blob([await doc.save()],{type:'application/pdf'});}
+async function imagesToPdf(imageFiles){const {PDFDocument}=getPdfLib(),doc=await PDFDocument.create();if(!imageFiles.length)throw Error('Choose one or more JPG or PNG images.');for(const f of imageFiles){const bytes=await f.arrayBuffer(),isPng=f.type==='image/png',img=isPng?await doc.embedPng(bytes):await doc.embedJpg(bytes),page=doc.addPage([img.width,img.height]);page.drawImage(img,{x:0,y:0,width:img.width,height:img.height});}return new Blob([await doc.save()],{type:'application/pdf'});}
+async function officeToPdf(file,format){if(!window.JSZip)throw Error('Office conversion library did not load.');const zip=await JSZip.loadAsync(await file.arrayBuffer());let text='';
+ if(format==='docxpdf'){const entry=zip.file('word/document.xml');if(!entry)throw Error('This does not look like a valid DOCX file.');const xml=new DOMParser().parseFromString(await entry.async('text'),'application/xml');text=[...xml.getElementsByTagName('w:p')].map(p=>[...p.getElementsByTagName('w:t')].map(t=>t.textContent).join('')).join('\n');}
+ else if(format==='pptxpdf'){const slides=Object.keys(zip.files).filter(n=>/^ppt\/slides\/slide\d+\.xml$/.test(n)).sort((a,b)=>Number(a.match(/slide(\d+)/)[1])-Number(b.match(/slide(\d+)/)[1]));if(!slides.length)throw Error('No PowerPoint slides were found.');let parts=[];for(let i=0;i<slides.length;i++){const xml=new DOMParser().parseFromString(await zip.file(slides[i]).async('text'),'application/xml');parts.push('Slide '+(i+1)+'\n'+[...xml.getElementsByTagName('a:t')].map(t=>t.textContent).join(' '));}text=parts.join('\n\n');}
+ else {const wb=zip.file('xl/workbook.xml');if(!wb)throw Error('This does not look like a valid XLSX file.');let parts=[];for(const path of Object.keys(zip.files).filter(n=>/^xl\/worksheets\/sheet\d+\.xml$/.test(n)).sort()){const xml=new DOMParser().parseFromString(await zip.file(path).async('text'),'application/xml');const rows=[...xml.getElementsByTagName('row')].map(row=>[...row.getElementsByTagName('c')].map(c=>{const v=c.getElementsByTagName('v')[0];return v?v.textContent:''}).join('\t'));parts.push(rows.join('\n'));}text=parts.join('\n\n');}
+ if(!text.trim())throw Error('No readable text was found in this document.');const {PDFDocument,StandardFonts}=getPdfLib(),pdf=await PDFDocument.create(),font=await pdf.embedFont(StandardFonts.Helvetica),lines=text.replace(/[^\x09\x0A\x0D\x20-\xFF]/g,'?').split(/\r?\n/).flatMap(line=>{const chunks=[];while(line.length>105){chunks.push(line.slice(0,105));line=line.slice(105);}chunks.push(line);return chunks;});let page=pdf.addPage([612,792]),y=755;for(const line of lines){if(y<45){page=pdf.addPage([612,792]);y=755;}page.drawText(line||' ',{x:42,y,size:10,font});y-=14;}return new Blob([await pdf.save()],{type:'application/pdf'});}
+async function pdfToOffice(file,format){const textBlob=await pdfToText(file),raw=await textBlob.text(),lines=raw.split(/\r?\n/).filter(x=>x.trim()),safe=lines.length?lines:['No selectable text was found in this PDF. It may contain scanned pages; use OCR first.'];
+ if(format==='docx'){if(!window.docx)throw Error('Word export library did not load.');const {Document,Packer,Paragraph}=docx;const doc=new Document({sections:[{children:safe.map(line=>new Paragraph(line))}]});return await Packer.toBlob(doc);}
+ if(format==='xlsx'){if(!window.XLSX)throw Error('Excel export library did not load.');const rows=safe.map((line,i)=>[i+1,line]);const wb=XLSX.utils.book_new(),ws=XLSX.utils.aoa_to_sheet([['Line','Extracted PDF text'],...rows]);XLSX.utils.book_append_sheet(wb,ws,'PDF Text');return new Blob([XLSX.write(wb,{bookType:'xlsx',type:'array'})],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});}
+ if(!window.PptxGenJS)throw Error('PowerPoint export library did not load.');const pptx=new PptxGenJS();pptx.layout='LAYOUT_WIDE';let slide=pptx.addSlide(),y=.35;for(const line of safe){if(y>6.8){slide=pptx.addSlide();y=.35;}slide.addText(line,{x:.45,y,w:12.3,h:.35,fontSize:13,breakLine:false,margin:0,fit:'shrink'});y+=.42;}const data=await pptx.write({outputType:'blob'});return data;
+}
+async function compressPdf(file,q){if(!window.pdfjsLib||!window.PDFLib)throw Error('PDF tools did not load. Check your internet connection and refresh.');pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';let data=await file.arrayBuffer(),pdf=await pdfjsLib.getDocument({data}).promise,out=await PDFLib.PDFDocument.create();for(let n=1;n<=pdf.numPages;n++){let page=await pdf.getPage(n),vp=page.getViewport({scale:Math.min(1.5,1.15)}),canvas=document.createElement('canvas');canvas.width=Math.round(vp.width);canvas.height=Math.round(vp.height);await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;let jpg=await new Promise(r=>canvas.toBlob(r,'image/jpeg',q)),bytes=await jpg.arrayBuffer(),embed=await out.embedJpg(bytes),p=out.addPage([vp.width,vp.height]);p.drawImage(embed,{x:0,y:0,width:vp.width,height:vp.height})}return new Blob([await out.save()],{type:'application/pdf'})}
+async function compressVideo(file,q){
+ if(!window.MediaRecorder)throw Error('This browser does not support MediaRecorder. Try current Chrome or Edge.');
+ const video=document.createElement('video'),url=URL.createObjectURL(file);video.src=url;video.muted=false;video.playsInline=true;video.preload='metadata';let audioContext=null;
+ try{
+  await new Promise((r,j)=>{video.onloadedmetadata=r;video.onerror=()=>j(Error('This video format cannot be decoded by your browser.'))});
+  if(!video.videoWidth||!video.videoHeight)throw Error('The video has no readable dimensions.');
+  const canvas=document.createElement('canvas'),scale=Math.min(1,1280/video.videoWidth);canvas.width=Math.max(1,Math.round(video.videoWidth*scale));canvas.height=Math.max(1,Math.round(video.videoHeight*scale));
+  const ctx=canvas.getContext('2d'),stream=canvas.captureStream(24);let audioPreserved=false;
+  const AudioCtx=window.AudioContext||window.webkitAudioContext;if(AudioCtx){try{audioContext=new AudioCtx();const source=audioContext.createMediaElementSource(video),destination=audioContext.createMediaStreamDestination(),silent=audioContext.createGain();silent.gain.value=0;source.connect(destination);source.connect(silent);silent.connect(audioContext.destination);destination.stream.getAudioTracks().forEach(track=>stream.addTrack(track));await audioContext.resume();audioPreserved=true;}catch(_){audioPreserved=false;}}
+  const candidates=['video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm','video/mp4'];
+  const mimeType=candidates.find(t=>MediaRecorder.isTypeSupported&&MediaRecorder.isTypeSupported(t));
+  if(!mimeType)throw Error('No supported browser recording format was found. Try an updated Chrome or Edge browser.');
+  const rec=new MediaRecorder(stream,{mimeType,videoBitsPerSecond:Math.round(350000+q*1800000)}),chunks=[];
+  rec.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data)};
+  const done=new Promise((resolve,reject)=>{rec.onstop=()=>resolve(new Blob(chunks,{type:rec.mimeType||mimeType}));rec.onerror=()=>reject(Error('Video recording failed.'))});
+  await video.play();rec.start(500);
+  let raf=0;const draw=()=>{if(video.paused||video.ended)return;ctx.drawImage(video,0,0,canvas.width,canvas.height);raf=requestAnimationFrame(draw)};draw();
+  await new Promise((resolve,reject)=>{video.onended=resolve;video.onerror=()=>reject(Error('Video playback stopped unexpectedly.'))});
+  if(raf)cancelAnimationFrame(raf);if(rec.state!=='inactive')rec.stop();const blob=await done;stream.getTracks().forEach(t=>t.stop());
+  if(!blob.size)throw Error('The browser produced an empty video.');
+  return {blob,extension:blob.type.includes('mp4')?'mp4':'webm',audioPreserved};
+ } finally {video.pause();video.removeAttribute('src');video.load();if(audioContext&&audioContext.state!=='closed')await audioContext.close();URL.revokeObjectURL(url)}
+}
+async function compressAudio(file,q,format,bitrate){
+ const C=window.AudioContext||window.webkitAudioContext;if(!C)throw Error('Audio decoding is not supported in this browser.');
+ const ac=new C();
+ try{
+  const buf=await ac.decodeAudioData(await file.arrayBuffer()),rate=Math.min(22050,Math.max(8000,Math.round(buf.sampleRate*(.45+q*.55)))),length=Math.ceil(buf.duration*rate),Offline=window.OfflineAudioContext||window.webkitOfflineAudioContext;
+  if(!Offline)throw Error('Offline audio processing is not supported by this browser.');
+  const offline=new Offline(1,length,rate),src=offline.createBufferSource();src.buffer=buf;src.connect(offline.destination);src.start();
+  const rendered=await offline.startRendering(),ch=rendered.getChannelData(0);
+  if(format==='mp3'){
+   if(!window.lamejs||!lamejs.Mp3Encoder)throw Error('MP3 encoder did not load. Check your internet connection or select WAV.');
+   const encoder=new lamejs.Mp3Encoder(1,rate,bitrate),chunks=[],block=1152;
+   for(let i=0;i<ch.length;i+=block){const part=ch.subarray(i,Math.min(i+block,ch.length)),pcm=new Int16Array(part.length);for(let j=0;j<part.length;j++){const x=Math.max(-1,Math.min(1,part[j]));pcm[j]=x<0?x*32768:x*32767;}const encoded=encoder.encodeBuffer(pcm);if(encoded.length)chunks.push(new Uint8Array(encoded));}
+   const end=encoder.flush();if(end.length)chunks.push(new Uint8Array(end));return {blob:new Blob(chunks,{type:'audio/mpeg'}),extension:'mp3'};
+  }
+  const bytes=new ArrayBuffer(44+ch.length*2),v=new DataView(bytes);function put(o,t){for(let i=0;i<t.length;i++)v.setUint8(o+i,t.charCodeAt(i))}put(0,'RIFF');v.setUint32(4,36+ch.length*2,true);put(8,'WAVE');put(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,rate,true);v.setUint32(28,rate*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);put(36,'data');v.setUint32(40,ch.length*2,true);
+  for(let i=0,o=44;i<ch.length;i++,o+=2){const x=Math.max(-1,Math.min(1,ch[i]));v.setInt16(o,x<0?x*32768:x*32767,true)}
+  return {blob:new Blob([bytes],{type:'audio/wav'}),extension:'wav'};
+ } finally {if(ac.state!=='closed')await ac.close();}
+}
+</script></body></html>
