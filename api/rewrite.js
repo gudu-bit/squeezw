@@ -1,4 +1,4 @@
-const allowedModes = new Set(["paraphrase", "humanize", "grammar", "simplify", "summarize", "tone"]);
+const allowedModes = new Set(["paraphrase", "grammar", "simplify", "summarize", "tone"]);
 const allowedTones = new Set(["natural", "formal", "professional", "casual", "academic", "friendly"]);
 const requests = new Map();
 
@@ -34,7 +34,6 @@ module.exports = async function handler(req, res) {
 
     const instructions = {
       paraphrase: "Paraphrase the user's text. Preserve its original meaning, facts, names, numbers, and important details. Do not add unsupported claims.",
-      humanize: "Rewrite the user's text so it sounds natural, clear, and conversational, with varied sentence structure and smooth transitions. Preserve the original meaning, facts, names, numbers, and point of view. Do not invent personal experiences or add unsupported claims.",
       grammar: "Correct grammar, spelling, punctuation, and awkward sentence structure. Preserve the user's wording and meaning as much as possible.",
       simplify: "Rewrite the text in clear, simple, easy-to-understand language. Explain difficult wording plainly without removing important meaning.",
       summarize: "Create a concise summary of the user's text. Keep the central ideas and important facts. Do not invent information.",
