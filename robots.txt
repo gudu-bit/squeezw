@@ -1,1 +1,4 @@
-User-agent: *\nAllow: /\n
+User-agent: *
+Allow: /
+
+Sitemap: https://squeezw.vercel.app/sitemap.xml
