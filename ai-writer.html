@@ -18,7 +18,7 @@
 <section class="hero"><div class="eyebrow">✦ Squeezw AI tools</div><h1>Make your writing <span>clearer.</span></h1><p>Rewrite, improve and understand your text with one simple AI writing assistant.</p></section>
 <section class="panel">
 <div class="modes" role="group" aria-label="Writing mode">
-<button class="mode active" data-mode="paraphrase">Paraphrase</button><button class="mode" data-mode="humanize">Humanize text</button><button class="mode" data-mode="grammar">Grammar</button><button class="mode" data-mode="simplify">Simple English</button><button class="mode" data-mode="summarize">Summarize</button><button class="mode" data-mode="tone">Change tone</button>
+<button class="mode active" data-mode="paraphrase">Paraphrase</button><button class="mode" data-mode="grammar">Grammar</button><button class="mode" data-mode="simplify">Simple English</button><button class="mode" data-mode="summarize">Summarize</button><button class="mode" data-mode="tone">Change tone</button>
 </div>
 <div class="toolbar" style="margin:0 0 16px"><label for="tone" class="muted">Writing style</label><select class="select" id="tone"><option value="natural">Natural</option><option value="formal">Formal</option><option value="professional">Professional</option><option value="casual">Casual</option><option value="academic">Academic</option><option value="friendly">Friendly</option></select><label for="language" class="muted">Output language</label><select class="select" id="language"><option>English</option><option>Hindi</option><option>Odia</option></select></div>
 <div class="uploadbar"><div><strong>📄 Upload a document</strong><small>PDF, DOCX or TXT · Maximum 15 MB · Text is extracted in your browser</small><div class="file-name" id="fileName">No file selected</div></div><div class="upload-actions"><input id="fileInput" type="file" accept=".pdf,.docx,.txt,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden><button class="secondary" id="chooseFile" type="button">Choose file</button><button class="secondary" id="removeFile" type="button">Remove</button></div></div>
@@ -36,7 +36,7 @@
 <script src="https://unpkg.com/mammoth@1.9.0/mammoth.browser.min.js"></script>
 <script>
 const $=id=>document.getElementById(id);let mode='paraphrase',busy=false;
-const modeNames={paraphrase:'Paraphrase',humanize:'Humanize text',grammar:'Fix grammar',simplify:'Rewrite in simple English',summarize:'Summarize',tone:'Change writing tone'};
+const modeNames={paraphrase:'Paraphrase',grammar:'Fix grammar',simplify:'Rewrite in simple English',summarize:'Summarize',tone:'Change writing tone'};
 document.querySelectorAll('.mode').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.mode').forEach(x=>x.classList.toggle('active',x===button));mode=button.dataset.mode;$('run').textContent='✦ '+modeNames[mode];$('status').textContent='Mode: '+modeNames[mode];}));
 $('source').addEventListener('input',()=>{$('count').textContent=$('source').value.length.toLocaleString()+' / 12,000 characters';});
 $('chooseFile').onclick=()=>$('fileInput').click();
