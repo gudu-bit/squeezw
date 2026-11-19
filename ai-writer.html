@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Writer — Paraphrase, Grammar & Summarize | Squeezw</title>
-<meta name="description" content="Use the Squeezw AI Writer to paraphrase text, fix grammar, simplify sentences, summarize documents and change writing tone online.">
+<title>AI Writer & Humanizer — Paraphrase, Grammar & Summarize | Squeezw</title>
+<meta name="description" content="Use Squeezw AI Writer and Humanizer to make writing more natural, paraphrase text, fix grammar, simplify sentences and summarize documents.">
 <link rel="canonical" href="https://squeezw.vercel.app/ai-writer.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
@@ -26,10 +26,10 @@
 </head>
 <body><main class="wrap">
 <header class="nav"><a class="logo" href="/" style="text-decoration:none;color:inherit">◈ SQUEEZE<span>.</span></a><a class="pill" href="/">← All file tools</a></header>
-<section class="hero"><div class="eyebrow">Free online writing assistant</div><h1>Free AI Writer for <span>Paraphrasing &amp; Grammar</span></h1><p>Rewrite text, correct grammar, simplify sentences, summarize documents and adjust your writing tone with the Squeezw AI writing assistant.</p></section>
+<section class="hero"><div class="eyebrow">Free online writing assistant</div><h1>Free AI Writer for <span>Paraphrasing &amp; Grammar</span></h1><p>Rewrite text, humanize robotic-sounding writing, correct grammar, simplify sentences, summarize documents and adjust your writing tone with the Squeezw AI writing assistant.</p></section>
 <section class="panel">
 <div class="modes" role="group" aria-label="Writing mode">
-<button class="mode active" data-mode="paraphrase">Paraphrase</button><button class="mode" data-mode="grammar">Grammar</button><button class="mode" data-mode="simplify">Simple English</button><button class="mode" data-mode="summarize">Summarize</button><button class="mode" data-mode="tone">Change tone</button>
+<button class="mode active" data-mode="paraphrase">Paraphrase</button><button class="mode" data-mode="grammar">Grammar</button><button class="mode" data-mode="simplify">Simple English</button><button class="mode" data-mode="summarize">Summarize</button><button class="mode" data-mode="tone">Change tone</button><button class="mode" data-mode="humanize">Humanize text</button>
 </div>
 <div class="toolbar" style="margin:0 0 16px"><label for="tone" class="muted">Writing style</label><select class="select" id="tone"><option value="natural">Natural</option><option value="formal">Formal</option><option value="professional">Professional</option><option value="casual">Casual</option><option value="academic">Academic</option><option value="friendly">Friendly</option></select><label for="language" class="muted">Output language</label><select class="select" id="language"><option>English</option><option>Hindi</option><option>Odia</option></select></div>
 <div class="uploadbar"><div><strong>📄 Upload a document</strong><small>PDF, DOCX or TXT · Maximum 15 MB · Text is extracted in your browser</small><div class="file-name" id="fileName">No file selected</div></div><div class="upload-actions"><input id="fileInput" type="file" accept=".pdf,.docx,.txt,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden><button class="secondary" id="chooseFile" type="button">Choose file</button><button class="secondary" id="removeFile" type="button">Remove</button></div></div>
@@ -40,7 +40,7 @@
 <div class="actions"><button class="primary" id="run" type="button">✦ Improve my text</button><div class="status" id="status" role="status" aria-live="polite">Ready when you are.</div></div>
 <div class="note">Tip: Review the result and make sure it reflects your meaning. AI can make mistakes. Do not enter passwords, private records or sensitive personal information.</div>
 </section>
-<section class="features"><article class="feature"><b>✍️ Paraphrase</b><p>Express the same idea in fresh, natural wording.</p></article><article class="feature"><b>✓ Grammar checker</b><p>Improve spelling, punctuation and sentence structure.</p></article><article class="feature"><b>↗ Simple English</b><p>Make complicated sentences easier to understand.</p></article></section>
+<section class="features"><article class="feature"><b>✍️ Paraphrase</b><p>Express the same idea in fresh, natural wording.</p></article><article class="feature"><b>✓ Grammar checker</b><p>Improve spelling, punctuation and sentence structure.</p></article><article class="feature"><b>↗ Simple English</b><p>Make complicated sentences easier to understand.</p></article><article class="feature"><b>✨ AI Humanizer</b><p>Make stiff or robotic-sounding writing more natural, clear and fluent while keeping the original meaning.</p></article></section>
 <section class="features" aria-label="About the AI Writer">
 <article class="feature"><b>Paraphrase text online</b><p>Rewrite sentences and paragraphs while keeping the original meaning. Review the result before using it.</p></article>
 <article class="feature"><b>Check grammar and clarity</b><p>Improve grammar, punctuation and sentence flow, or simplify complicated wording.</p></article>
@@ -53,7 +53,7 @@
 <script src="https://unpkg.com/mammoth@1.9.0/mammoth.browser.min.js"></script>
 <script>
 const $=id=>document.getElementById(id);let mode='paraphrase',busy=false;
-const modeNames={paraphrase:'Paraphrase',grammar:'Fix grammar',simplify:'Rewrite in simple English',summarize:'Summarize',tone:'Change writing tone'};
+const modeNames={paraphrase:'Paraphrase',grammar:'Fix grammar',simplify:'Rewrite in simple English',summarize:'Summarize',tone:'Change writing tone',humanize:'Humanize text'};
 document.querySelectorAll('.mode').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.mode').forEach(x=>x.classList.toggle('active',x===button));mode=button.dataset.mode;$('run').textContent='✦ '+modeNames[mode];$('status').textContent='Mode: '+modeNames[mode];}));
 $('source').addEventListener('input',()=>{$('count').textContent=$('source').value.length.toLocaleString()+' / 12,000 characters';});
 $('chooseFile').onclick=()=>$('fileInput').click();
