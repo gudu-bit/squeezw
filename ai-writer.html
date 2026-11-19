@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Free AI Text Humanizer & Writer — Paraphrase Online | Squeeze</title>
-<meta name="description" content="Humanize AI text online with Squeeze. Make robotic-sounding writing more natural, paraphrase text, fix grammar, simplify and summarize. Free AI writing tool.">
+<title>Free AI Text Humanizer & Writer — Paraphrase Online | Novalyti</title>
+<meta name="description" content="Humanize AI text online with Novalyti. Make robotic-sounding writing more natural, paraphrase text, fix grammar, simplify and summarize. Free AI writing tool.">
 <link rel="canonical" href="https://squeezw.vercel.app/ai-writer.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Squeeze">
+<meta property="og:site_name" content="Novalyti">
 <meta property="og:url" content="https://squeezw.vercel.app/ai-writer.html">
-<meta property="og:title" content="Free AI Text Humanizer &amp; Writer | Squeeze">
-<meta property="og:description" content="Humanize AI text, paraphrase writing, fix grammar and summarize text with Squeeze.">
+<meta property="og:title" content="Free AI Text Humanizer &amp; Writer | Novalyti">
+<meta property="og:description" content="Humanize AI text, paraphrase writing, fix grammar and summarize text with Novalyti.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Free AI Text Humanizer &amp; Writer | Squeeze">
+<meta name="twitter:title" content="Free AI Text Humanizer &amp; Writer | Novalyti">
 <meta name="twitter:description" content="Humanize AI text, paraphrase, fix grammar and improve writing online for free.">
 <meta name="theme-color" content="#f5f9ff">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Squeezw AI Writer","url":"https://squeezw.vercel.app/ai-writer.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"en","description":"An online AI writing tool for paraphrasing, grammar improvement, simplifying text, summarizing and changing writing tone.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+{"@context":"https://schema.org","@type":"WebApplication","name":"Novalyti AI Writer","url":"https://squeezw.vercel.app/ai-writer.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"en","description":"An online AI writing tool for paraphrasing, grammar improvement, simplifying text, summarizing and changing writing tone.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
 <style>
 :root{--bg:#f5f9ff;--panel:#fff;--line:#dce7f5;--text:#29232a;--muted:#77717a;--blue:#2563eb;--deep:#1745a3;--pale:#eef5ff}
@@ -26,7 +26,7 @@
 <script defer src="https://va.vercel-scripts.com/v1/script.js"></script>
 </head>
 <body><main class="wrap">
-<header class="nav"><a class="logo" href="/" style="text-decoration:none;color:inherit">◈ SQUEEZE<span>.</span></a><a class="pill" href="/">← All file tools</a></header>
+<header class="nav"><a class="logo" href="/" style="text-decoration:none;color:inherit">◈ NOVALYTI<span>.</span></a><a class="pill" href="/">← All file tools</a></header>
 <section class="hero"><div class="eyebrow">Free online writing assistant</div><h1>Free AI Text Humanizer &amp; <span>Writing Assistant</span></h1><p>Humanize AI text online by making stiff or repetitive writing sound more natural. You can also paraphrase, correct grammar, simplify sentences, summarize text and change tone.</p></section>
 <section class="card" style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin:18px 0">
 <h2 style="margin:0 0 8px;font-size:21px">How to humanize AI text</h2>
@@ -53,7 +53,7 @@
 <article class="feature"><b>Summarize documents</b><p>Extract text from supported PDF, DOCX and TXT files and create a shorter version. Scanned PDFs without selectable text are not supported.</p></article>
 </section>
 <p class="note">The AI Writer requires the website’s AI service to be configured and available. AI output can contain mistakes, so review it before publishing or submitting.</p>
-<div class="footer"><a class="back" href="/">Squeeze free image &amp; PDF tools</a> · AI writing assistance for clearer communication.</div>
+<div class="footer"><a class="back" href="/">Novalyti free image &amp; PDF tools</a> · AI writing assistance for clearer communication.</div>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://unpkg.com/mammoth@1.9.0/mammoth.browser.min.js"></script>
@@ -99,7 +99,7 @@ $('fileInput').addEventListener('change',async(event)=>{
 $('clear').onclick=()=>{$('source').value='';$('output').value='';$('count').textContent='0 / 12,000 characters';$('outCount').textContent='Your result appears here';$('status').textContent='Text cleared.';$('source').focus();};
 $('copy').onclick=async()=>{if(!$('output').value){$('status').textContent='There is no result to copy yet.';return;}try{await navigator.clipboard.writeText($('output').value);$('status').textContent='Copied to clipboard.';}catch(e){$('output').select();document.execCommand('copy');$('status').textContent='Copied.';}};
 $('replace').onclick=()=>{if($('output').value){$('source').value=$('output').value;$('count').textContent=$('source').value.length.toLocaleString()+' / 12,000 characters';$('status').textContent='Result moved to the input box.';}};
-$('downloadPdf').onclick=()=>{const text=$('output').value.trim();if(!text){$('status').textContent='Generate a result before creating a PDF.';return;}const win=window.open('','_blank');if(!win){$('status').textContent='Allow pop-ups in your browser to create the PDF.';return;}win.document.open();win.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Squeezw AI Writer</title><style>body{font:15px/1.7 Arial,sans-serif;color:#222;padding:40px;max-width:850px;margin:auto}h1{font-size:22px;color:#1745a3;border-bottom:1px solid #ddd;padding-bottom:12px}pre{white-space:pre-wrap;overflow-wrap:break-word;font:inherit}@page{margin:18mm}</style></head><body><h1>Squeezw — Improved Text</h1><pre id="pdfText"></pre><div class="legal-links" style="margin-top:14px;padding-top:12px;border-top:1px solid #e5eaf2;display:flex;gap:14px;flex-wrap:wrap;font-size:14px"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="/contact.html">Contact</a></div>
+$('downloadPdf').onclick=()=>{const text=$('output').value.trim();if(!text){$('status').textContent='Generate a result before creating a PDF.';return;}const win=window.open('','_blank');if(!win){$('status').textContent='Allow pop-ups in your browser to create the PDF.';return;}win.document.open();win.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Novalyti AI Writer</title><style>body{font:15px/1.7 Arial,sans-serif;color:#222;padding:40px;max-width:850px;margin:auto}h1{font-size:22px;color:#1745a3;border-bottom:1px solid #ddd;padding-bottom:12px}pre{white-space:pre-wrap;overflow-wrap:break-word;font:inherit}@page{margin:18mm}</style></head><body><h1>Novalyti — Improved Text</h1><pre id="pdfText"></pre><div class="legal-links" style="margin-top:14px;padding-top:12px;border-top:1px solid #e5eaf2;display:flex;gap:14px;flex-wrap:wrap;font-size:14px"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="/contact.html">Contact</a></div>
 </body></html>');win.document.close();win.document.getElementById('pdfText').textContent=text;win.focus();win.print();$('status').textContent='In the print window, choose “Save as PDF”.';};
 $('run').onclick=async()=>{const text=$('source').value.trim();if(!text){$('status').textContent='Please enter some text first.';$('source').focus();return;}if(busy)return;busy=true;$('run').disabled=true;$('run').textContent='Working…';$('status').textContent='AI is improving your text…';$('output').value='';try{const response=await fetch('/api/rewrite',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text,mode,tone:$('tone').value,language:$('language').value})});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||'The request could not be completed. Please try again.');if(!data.result)throw new Error('The AI returned an empty result. Please try again.');$('output').value=data.result;$('outCount').textContent=data.result.length.toLocaleString()+' characters';$('status').textContent='Done. Please review the result.';}catch(error){$('status').textContent=error.message;}finally{busy=false;$('run').disabled=false;$('run').textContent='✦ '+modeNames[mode];}};
 </script>
