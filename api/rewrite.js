@@ -1,4 +1,4 @@
-const allowedModes = new Set(["paraphrase", "grammar", "simplify", "summarize", "tone"]);
+const allowedModes = new Set(["paraphrase", "grammar", "simplify", "summarize", "tone", "humanize"]);
 const allowedTones = new Set(["natural", "formal", "professional", "casual", "academic", "friendly"]);
 const requests = new Map();
 
@@ -37,7 +37,8 @@ module.exports = async function handler(req, res) {
       grammar: "Correct grammar, spelling, punctuation, and awkward sentence structure. Preserve the user's wording and meaning as much as possible.",
       simplify: "Rewrite the text in clear, simple, easy-to-understand language. Explain difficult wording plainly without removing important meaning.",
       summarize: "Create a concise summary of the user's text. Keep the central ideas and important facts. Do not invent information.",
-      tone: "Rewrite the text in the requested writing tone while preserving its meaning and factual details."
+      tone: "Rewrite the text in the requested writing tone while preserving its meaning and factual details.",
+      humanize: "Rewrite the text so it sounds natural, fluent, and genuinely readable. Vary sentence rhythm where appropriate, use clear everyday phrasing, and remove stiff, repetitive, or awkward wording. Preserve the author’s meaning, facts, names, numbers, and personal voice. Do not invent experiences, sources, citations, or details. Do not intentionally add errors or claim that the result can bypass AI detectors."
     };
     const prompt = [
       instructions[mode],
